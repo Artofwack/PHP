@@ -36,11 +36,9 @@
     margin-right: auto;
     padding: 0px 0px 0px 0px;
 
-    border-width: 2px;
-    border-color: #212738;
-    border-style: solid;
+      border: 2px solid #212738;
 
-    background-color: #FFFFFF;
+      background-color: #FFFFFF;
 
     text-align: center;
   }
@@ -113,11 +111,9 @@
     margin: 8px 0px 8px 0px;
     padding: 8px 8px 8px 8px;
 
-    border-width: 1px;
-    border-style: dotted;
-    border-color: #000000;
+      border: 1px dotted #000000;
 
-    background-color: #F5F6F7;
+      background-color: #F5F6F7;
 
     font-style: italic;
   }
@@ -230,7 +226,8 @@
                 It is based on the equivalent page on Debian, from which the Ubuntu Apache
                 packaging is derived.
                 If you can read this page, it means that the Apache HTTP server installed at
-                this site is working properly. You should <b>replace this file</b> (located at
+              this site is working properly. You should <span style="font-weight: bold;">replace this file</span>
+              (located at
                 <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.
           </p>
 
@@ -255,7 +252,7 @@
                 <b>fully documented in
                 /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full
                 documentation. Documentation for the web server itself can be
-                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>
+              found by accessing the <a href="/manual">manual</a> if the <samp>apache2-doc</samp>
                 package was installed on this server.
 
           </p>

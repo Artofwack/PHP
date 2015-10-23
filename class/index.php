@@ -1,13 +1,13 @@
 <?php
-	//file: index.php
-	$msg = $_GET['msg'];
-	if ($msg == 'pw') {
-		$message = "Your password is incorrect.<br /> Please re-enter";
-	} elseif ($msg == 'cheat') {
-		$message = "You already have an account";
-	} else {
-		$message = '';
-	}
+//file: index.php
+$msg = $_GET['msg'];
+if ($msg == 'pw') {
+	$message = "Your email or password is incorrect.<br /> Please re-enter";
+} elseif ($msg == 'cheat') {
+	$message = "You already have an account";
+} else {
+	$message = '';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,11 +26,11 @@
 <div class="container">
 	<form class="form-signin" action="process.php" method="post">
 		<?php
-			if ($message == '') {
-				echo '<h2 class="form-signin-heading">Please sign in</h2><a href="register.php">Register</a>';
-			} else {
-				echo '<h2 class="form-signin-heading" style="color: red;">' . $message . '</h2>';
-			}
+		if ($message == '') {
+			echo '<h2 class="form-signin-heading">Please sign in</h2><a href="register.php">Register</a>';
+		} else {
+			echo '<h2 class="form-signin-heading" style="color: red;">' . $message . '</h2><a href="register.php">Register</a>';
+		}
 		?>
 		<input type="email" id="email" name="email" class="form-control" placeholder="Email address"
 		       required autofocus>
@@ -46,9 +46,14 @@
 </div>
 <!-- /container -->
 </body>
-<!-- Bootstrap core CSS -->
-<link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="../jquery.min.js"></script>
-<!-- Custom styles for this template -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 <link href="signin.css" rel="stylesheet">
 </html>
